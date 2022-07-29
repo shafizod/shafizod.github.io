@@ -1,3 +1,5 @@
 theme: jekyll-theme-modernist
 title: Документация GateApi
 description: Спецификация протокола взаимодействия между системой «alif.pro» и агентами по приему платежей
+github:
+  is_project_page: false

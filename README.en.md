@@ -1,3 +1,7 @@
+---
+permalink: /en
+---
+
 [![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.md)
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.en.md)
 

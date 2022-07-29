@@ -1,9 +1,14 @@
 ---
-permalink: /en
+permalink: /agents/en
 ---
 
-[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://shafizod.github.io)
-[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://shafizod.github.io/en)
+[![providers](https://img.shields.io/badge/doc-Providers-success)](https://shafizod.github.io/providers)
+[![agents](https://img.shields.io/badge/doc-Agents-success)](https://shafizod.github.io/agents)
+[![invoices](https://img.shields.io/badge/doc-Invoices-success)](https://shafizod.github.io/invoices)
+[![webcheckout](https://img.shields.io/badge/doc-Webcheckout-success)](https://shafizod.github.io/webcheckout)
+
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://shafizod.github.io/agents)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://shafizod.github.io/agents/en)
 
 ## General principles of the protocol
 
@@ -270,7 +275,7 @@ content-type: application/json; charset=utf-8
 ```
 
 
-**Table #1. Response codes**
+## Table #1. Response codes
 
 Code  | Description                                | fatality  | check | pay | post_check
 ----- | ------------------------------------------ | --------- | ----- | --- | ----------
@@ -296,7 +301,7 @@ Code  | Description                                | fatality  | check | pay | p
 520   | Payment pending                            | No        | -     | +   | -
 521   | Payment under review                       | No        | -     | +   | -
 
-**Table #2. Status codes**
+## Table #2. Status codes
 
 Code  | Status    | Description                           | Fatality
 ----- | --------- | ------------------------------------- | --------
@@ -306,7 +311,7 @@ Code  | Status    | Description                           | Fatality
 3     | failed    | Transaction failed                    | Yes
 4     | cancelled | Transaction canceled                  | Yes
 
-**Table No. 3. List of services**
+## Table No. 3. List of services
 
 Title                 | Description
 --------------------- | -----------

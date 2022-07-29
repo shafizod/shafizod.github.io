@@ -1,3 +1,6 @@
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.en.md)
+
 ## Общие принципы протокола
 
 Взаимодействие Агента (далее Партнер) и Системы (далее Алиф) построено на основе протокола HTTPS (RFC 2818: HTTP/1.1) в режиме "запрос-ответ", где инициатором запроса всегда является Партнер, а отвечающей стороной – Алиф. Все запросы должны быть отправлены с методом POST.

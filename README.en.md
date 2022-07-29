@@ -1,3 +1,6 @@
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/shafizod/shafizod.github.io/blob/main/README.en.md)
+
 ## General principles of the protocol
 
 The interaction between the Agent (hereinafter referred to as the Partner) and the System (hereinafter Alif) is built on the basis of the HTTPS protocol (RFC 2818: HTTP/1.1) in the "request-response" mode, where the initiator of the request is always the Partner, and the responder is Alif. All requests must be sent with the POST method.

@@ -311,7 +311,7 @@ Code  | Status    | Description                           | Fatality
 3     | failed    | Transaction failed                    | Yes
 4     | cancelled | Transaction canceled                  | Yes
 
-## Table No. 3. List of services
+## Table #3. List of services
 
 Title                 | Description
 --------------------- | -----------

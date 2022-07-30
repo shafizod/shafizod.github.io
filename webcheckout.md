@@ -50,7 +50,7 @@ infoHash        | string        | hexadecimal   | Опционально   | А�
   $info = 'Xiaomi Mi Mix 2S 6/64 Gb';
   $email = 'testUsers@gmail.com';
   $phone = '988888888';
-  $token = hash_hmac('sha256', $key.$orderId.number_format($amount, 2, '.', '').$callbackUrl, hash_hmac('sha256', $key, $password));
+  $token = hash_hmac('sha256', $key.$orderId.number_format($amount, 2, '.', '').$callbackUrl, hash_hmac('sha256', $password, $key));
 ?>
 
 <form name="AlifPayForm" action="https://alifpay.tj/web" method="post" id="alifPayForm">
@@ -96,7 +96,7 @@ Service-Name: Alifpay
   "phone": "+992931234455"
 }
 
-// Конкатенированная строка для генерации token ответа: 12345678ok92938922
+// Конкатенированная строка для генерации token ответа: "12345678ok92938922"
 ```
 
 ## Проверка статуса оплаты
@@ -126,7 +126,7 @@ Content-type: application/json; charset=utf-8
   "token": "d7e798553d8db0edfc922dafbd31e246c1d8dd755c62a4da8a9cdc1eb8333d4b"
 }
 
-// Конкатенированная строка для генерации token запроса: 33412212345678
+// Конкатенированная строка для генерации token запроса: "33412212345678"
 
 // Пример ответа
 
@@ -139,5 +139,5 @@ Content-type: application/json; charset=utf-8
   "phone": "+992931234455"
 }
 
-// Конкатенированная строка для генерации token ответа: 12345678ok92938922
+// Конкатенированная строка для генерации token ответа: "12345678ok92938922"
 ```

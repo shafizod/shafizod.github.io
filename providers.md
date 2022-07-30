@@ -7,7 +7,7 @@ permalink: /providers
 [![invoices](https://img.shields.io/badge/doc-Invoices-success)](https://shafizod.github.io/invoices)
 [![webcheckout](https://img.shields.io/badge/doc-Webcheckout-success)](https://shafizod.github.io/webcheckout)
 
-### Общие принципы протокола
+## Общие принципы протокола
 
 Взаимодействие Системы и провайдера строится в режиме "запрос-ответ", где инициатором запроса всегда является Система, а отвечающей стороной – провайдер.
 

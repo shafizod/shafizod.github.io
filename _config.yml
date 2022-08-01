@@ -5,12 +5,11 @@ description: Specification of interaction protocol between the Alif Bank system 
 #markdown_extensions:
 #  - pymdownx.tabbed
 
-#markdown_extensions:
-#  - pymdownx.superfences
-#  - pymdownx.tabbed:
-#      alternate_style: true
-
 markdown_extensions:
-  - pymdownx.tabbed:
-      alternate_style: true
+ - pymdownx.superfences
+ - pymdownx.tabbed:
+     alternate_style: true
 
+# markdown_extensions:
+#   - pymdownx.tabbed:
+#       alternate_style: true

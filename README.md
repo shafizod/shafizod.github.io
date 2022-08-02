@@ -3,6 +3,25 @@
 [![invoices](https://img.shields.io/badge/doc-Invoices-success)](https://shafizod.github.io/invoices)
 [![webcheckout](https://img.shields.io/badge/doc-Webcheckout-success)](https://shafizod.github.io/webcheckout)
 
+{::options parse_block_html="true" /}
+
+<details>
+<summary>I could use some help...</summary>
+<p>
+
+```c#
+public class Order
+{
+    public int OrderId { get; set; }
+    public int CustomerId { get; set; }
+
+    public List<int> Products { get; set; }
+}
+```
+
+</p>
+</details> 
+
 <details>
   <summary>Check</summary>
   
@@ -68,6 +87,7 @@
     "hash": "281829ecd0a082266a7571f885e1edea613c7e5a562626cda9203eaf1ee19d7a"
 }
 ```
+
         </div>
     </li>
 
@@ -147,3 +167,5 @@
     </li>
 
 </ul>
+
+{::options parse_block_html="false" /}

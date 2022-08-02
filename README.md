@@ -53,9 +53,9 @@ Of course, it has to be Hello World, right?
 <details>
     <summary markdown="span">Let's see some code! 5</summary>
 
-    ```python
-    print('Hello World!')
-    ```
+```python
+print('Hello World!')
+```
 
     Of course, it has to be Hello World, right?
     </details>

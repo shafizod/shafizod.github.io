@@ -3,6 +3,8 @@
 [![invoices](https://img.shields.io/badge/doc-Invoices-success)](https://shafizod.github.io/invoices)
 [![webcheckout](https://img.shields.io/badge/doc-Webcheckout-success)](https://shafizod.github.io/webcheckout)
 
+{::options parse_block_html="true" /}
+
 <details><summary markdown="span">Let's see some code! 1</summary>
 
 ```json
@@ -100,3 +102,5 @@ Of course, it has to be Hello World, right?
 </details>
 
 <hr />
+
+{::options parse_block_html="false" /}

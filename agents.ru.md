@@ -88,10 +88,17 @@ accountInfo       | string        | Опционально   | Информац�
 limit             | string        | Условно       | Остаток лимита пополнения карты клиента. Обязательно, если "service":"card \| card_all"
 
 
+Пример №1. Пополнение кошелька алиф.моби
+
+{::options parse_block_html="true" /}
+
+<details><summary markdown="span">Check</summary>
+
 ```markdown
-// Пример запроса №1
+// Запрос
+
 Метод: POST
-Адрес: https://alifpay.tj/gate/{check | pay | post_check}
+Адрес: https://alifpay.tj/gate/check
 Accept: application/json
 Content-type: application/json; charset=utf-8
 
@@ -120,7 +127,7 @@ Content-type: application/json; charset=utf-8
 
 // Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
 
-// Пример ответа
+// Ответ
 
 {
   "id": 14371303,
@@ -134,25 +141,31 @@ Content-type: application/json; charset=utf-8
   "topay": null,
   "accountInfo": "{\"verified\":true}"
 }
+```
 
+</details>
 
-// Пример запроса №2
+<details><summary markdown="span">Pay</summary>
+
+```markdown
+// Запрос
+
 Метод: POST
-Адрес: https://alifpay.tj/gate/{check | pay | post_check}
+Адрес: https://alifpay.tj/gate/pay
 Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "provider",
+  "service": "wallet",
   "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "f5094d6ed0289c5dbe04d0bdc4d45fe2d753b78bffecbb6f022c5639c58f4d80",
-  "account": "939145566",
-  "amount": 15.05,
-  "currency": "TJS",
-  "txnid": "4ff79f2d-40ec-4f0a-aa18-4482b1d81bec",
+  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
+  "account": "992928313003",
+  "amount": 18000.00,
+  "currency": "RUB",
+  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
   "phone": "+992935141010",
   "fee": 0.15,
-  "providerId": 93,
+  "providerId": 0,
   "last_name":"Иванов",
   "first_name": "Иван",
   "middle_name": "Иванович",
@@ -165,24 +178,188 @@ Content-type: application/json; charset=utf-8
   "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b99391455664ff79f2d-40ec-4f0a-aa18-4482b1d81bec15.05"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
 
-// Пример ответа
+// Ответ
 
 {
-  "id": 14371677,
-  "datetime": "2022-07-28T23:01:22.624092959+05:00",
+  "id": 14371303,
+  "datetime": "2022-07-28T22:43:18.742486833+05:00",
   "code": 200,
-  "message": "Аккаунт найден",
+  "message": "Ғ.Ш.",
   "status": "accepted",
   "statusCode": 0,
-  "amount": "15.05",
-  "fx": "1",
+  "amount": "3022.20",
+  "fx": "0.1679",
   "topay": null,
-  "accountInfo": null
+  "accountInfo": "{\"verified\":true}"
 }
 ```
 
+</details>
+
+Пример №2. Пополнение карты Корти Милли
+
+<details><summary markdown="span">Check</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/check
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+  "service": "wallet",
+  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
+  "account": "992928313003",
+  "amount": 18000.00,
+  "currency": "RUB",
+  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
+  "phone": "+992935141010",
+  "fee": 0.15,
+  "providerId": 0,
+  "last_name":"Иванов",
+  "first_name": "Иван",
+  "middle_name": "Иванович",
+  "sender_birthday": "12.12.1990",
+  "id_series_number": "5436271612",
+  "address": "Foteh Niyozi St",
+  "resident_city": "Dushanbe",
+  "resident_country": 860,
+  "postal_code": "734000",
+  "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+
+// Ответ
+
+{
+  "id": 14371303,
+  "datetime": "2022-07-28T22:43:18.742486833+05:00",
+  "code": 200,
+  "message": "Ғ.Ш.",
+  "status": "accepted",
+  "statusCode": 0,
+  "amount": "3022.20",
+  "fx": "0.1679",
+  "topay": null,
+  "accountInfo": "{\"verified\":true}"
+}
+```
+
+</details>
+
+<details><summary markdown="span">Pay</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/pay
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+  "service": "wallet",
+  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
+  "account": "992928313003",
+  "amount": 18000.00,
+  "currency": "RUB",
+  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
+  "phone": "+992935141010",
+  "fee": 0.15,
+  "providerId": 0,
+  "last_name":"Иванов",
+  "first_name": "Иван",
+  "middle_name": "Иванович",
+  "sender_birthday": "12.12.1990",
+  "id_series_number": "5436271612",
+  "address": "Foteh Niyozi St",
+  "resident_city": "Dushanbe",
+  "resident_country": 860,
+  "postal_code": "734000",
+  "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+
+// Ответ
+
+{
+  "id": 14371303,
+  "datetime": "2022-07-28T22:43:18.742486833+05:00",
+  "code": 200,
+  "message": "Ғ.Ш.",
+  "status": "accepted",
+  "statusCode": 0,
+  "amount": "3022.20",
+  "fx": "0.1679",
+  "topay": null,
+  "accountInfo": "{\"verified\":true}"
+}
+```
+
+</details>
+
+<details><summary markdown="span">Post Check</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/post_check
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+  "service": "wallet",
+  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
+  "account": "992928313003",
+  "amount": 18000.00,
+  "currency": "RUB",
+  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
+  "phone": "+992935141010",
+  "fee": 0.15,
+  "providerId": 0,
+  "last_name":"Иванов",
+  "first_name": "Иван",
+  "middle_name": "Иванович",
+  "sender_birthday": "12.12.1990",
+  "id_series_number": "5436271612",
+  "address": "Foteh Niyozi St",
+  "resident_city": "Dushanbe",
+  "resident_country": 860,
+  "postal_code": "734000",
+  "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+
+// Ответ
+
+{
+  "id": 14371303,
+  "datetime": "2022-07-28T22:43:18.742486833+05:00",
+  "code": 200,
+  "message": "Ғ.Ш.",
+  "status": "accepted",
+  "statusCode": 0,
+  "amount": "3022.20",
+  "fx": "0.1679",
+  "topay": null,
+  "accountInfo": "{\"verified\":true}"
+}
+```
+
+</details>
+
+{::options parse_block_html="false" /}
 
 ## Запрос accounts
 

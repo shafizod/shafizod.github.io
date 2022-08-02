@@ -6,7 +6,7 @@
 <details>
 <summary>I could use some help...</summary>
 <p>
-{::options parse_block_html="true" /}
+{::options parse_block_html="false" /}
 
 ```c#
 public class Order
@@ -18,13 +18,13 @@ public class Order
 }
 ```
 
-{::options parse_block_html="false" /}
+{::options parse_block_html="true" /}
 </p>
 </details> 
 
 <details>
   <summary>Check</summary>
-    {::options parse_block_html="true" /}
+    {::options parse_block_html="false" /}
   
     ```
     {
@@ -38,12 +38,12 @@ public class Order
     }
     ```
 
-    {::options parse_block_html="false" /}
+    {::options parse_block_html="true" /}
 </details>
 
 <details>
 <summary>Pay</summary>
-    {::options parse_block_html="true" /}
+    {::options parse_block_html="false" /}
 
     ```
     {
@@ -57,12 +57,12 @@ public class Order
     }
     ```
 
-    {::options parse_block_html="false" /}
+    {::options parse_block_html="true" /}
 </details>
 
 <details>
 <summary>PostCheck</summary>
-    {::options parse_block_html="true" /}
+    {::options parse_block_html="false" /}
 
     ```markdown
     {
@@ -76,7 +76,7 @@ public class Order
     }
     ```
 
-    {::options parse_block_html="false" /}
+    {::options parse_block_html="true" /}
 </details>
 
 <ul class="tabs">
@@ -85,7 +85,7 @@ public class Order
         <input type="radio" name="tabs" id="tab1" checked="checked" />
         <label for="tab1">One</label>
         <div id="tab-content1" class="content">
-            {::options parse_block_html="true" /}
+            {::options parse_block_html="false" /}
 
             ```markdown
             {
@@ -99,7 +99,7 @@ public class Order
             }
             ```
 
-            {::options parse_block_html="false" /}
+            {::options parse_block_html="true" /}
         </div>
     </li>
 
@@ -107,7 +107,7 @@ public class Order
         <input type="radio" name="tabs" id="tab2" />
         <label for="tab2">Two</label>
         <div id="tab-content2" class="content">
-            {::options parse_block_html="true" /}
+            {::options parse_block_html="false" /}
 
             ```
             {
@@ -121,7 +121,7 @@ public class Order
             }
             ```
 
-            {::options parse_block_html="false" /}
+            {::options parse_block_html="true" /}
         </div>
     </li>
 
@@ -129,7 +129,7 @@ public class Order
         <input type="radio" name="tabs" id="tab3" />
         <label for="tab3">Three</label>
         <div id="tab-content3" class="content">
-            {::options parse_block_html="true" /}
+            {::options parse_block_html="false" /}
 
             ```{
                 "service": "card_all",
@@ -142,7 +142,7 @@ public class Order
             }
             ```
 
-            {::options parse_block_html="false" /}
+            {::options parse_block_html="true" /}
         </div>
     </li>
 
@@ -150,7 +150,7 @@ public class Order
         <input type="radio" name="tabs" id="tab4" />
         <label for="tab4">Four</label>
         <div id="tab-content4" class="content">
-            {::options parse_block_html="true" /}
+            {::options parse_block_html="false" /}
 
             ```code
             {
@@ -164,7 +164,7 @@ public class Order
             }
             ```
 
-            {::options parse_block_html="false" /}
+            {::options parse_block_html="true" /}
         </div>
     </li>
 
@@ -172,7 +172,7 @@ public class Order
         <input type="radio" name="tabs" id="tab5" />
         <label for="tab5">Five</label>
         <div id="tab-content5" class="content">
-            {::options parse_block_html="true" /}
+            {::options parse_block_html="false" /}
 
             ```json
             {
@@ -186,7 +186,7 @@ public class Order
             }
             ```
             
-            {::options parse_block_html="false" /}
+            {::options parse_block_html="true" /}
         </div>
     </li>
 

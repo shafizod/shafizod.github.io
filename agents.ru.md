@@ -197,7 +197,6 @@ Content-type: application/json; charset=utf-8
 
 </details>
 <br />
-
 Пример №2. Пополнение кредита Алиф
 
 <details><summary markdown="span">Check</summary>
@@ -311,7 +310,6 @@ Content-type: application/json; charset=utf-8
 
 </details>
 <br />
-
 Пример №3. Пополнение карты Корти Милли
 
 <details><summary markdown="span">Check</summary>
@@ -410,7 +408,7 @@ Content-type: application/json; charset=utf-8
     "code": 200,
     "message": "payment saved for further process",
     "status": "pending",
-    "statusCode": 1,
+    "statusCode": 2,
     "amount": "6660.59",
     "fx": "10.16",
     "topay": null,
@@ -472,8 +470,7 @@ Content-type: application/json; charset=utf-8
 ```
 
 </details>
-
-
+<br />
 Пример №4. Пополнение услуги провайдера
 
 <details><summary markdown="span">Check</summary>
@@ -634,7 +631,7 @@ Content-type: application/json; charset=utf-8
 ```
 
 </details>
-
+<br />
 {::options parse_block_html="false" /}
 
 ## Запрос accounts
@@ -664,68 +661,174 @@ topay             | object        | Условно       | Информацию 
 accountInfo       | string        | Опционально   | Информация о счета получателя.
 
 
+{::options parse_block_html="true" /}
+
+Пример №1. Проверка кошелька алиф.моби
+
+<details><summary markdown="span">Check Account</summary>
+
 ```markdown
-// Пример запроса №1
+// Запрос
+
 Метод: POST
 Адрес: https://alifpay.tj/gate/accounts
 Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "e5a6f1344b3a15483d70e8d6b598b94ca08896a71f0acf9041648e12528e6009",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "providerId": 0,
-  "datetime": "Thu, 28 Jul 2022 23:01:22 +05"
+    "service": "wallet",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "eb549c288dea5172a7b21d96402941efdcc5ffe9e713d14c3b16a6625ec95c4f",
+    "account": "+992933507769",
+    "amount": 80.00,
+    "currency": "TJS",
+    "providerId": 0,
+    "datetime": "Tue, 02 Aug 2022 13:33:26 +05"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Thu, 28 Jul 2022 23:01:22 +05"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Tue, 02 Aug 2022 13:33:26 +05"
 
-// Пример ответа
-
-{
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "accountInfo": "{\"verified\":true}",
-  "topay": null,
-  "amount": "3022.20",
-  "fx": "0.1679"
-}
-
-
-// Пример запроса №2
-Метод: POST
-Адрес: https://alifpay.tj/gate/accounts
-Accept: application/json
-Content-type: application/json; charset=utf-8
+// Ответ
 
 {
-  "service": "provider",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "e5a6f1344b3a15483d70e8d6b598b94ca08896a71f0acf9041648e12528e6009",
-  "account": "939145566",
-  "amount": 15.05,
-  "currency": "TJS",
-  "providerId": 93,
-  "datetime": "Thu, 28 Jul 2022 23:01:22 +05"
-}
-
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Thu, 28 Jul 2022 23:01:22 +05"
-
-// Пример ответа
-
-{
-  "code": 200,
-  "message": "Аккаунт найден",
-  "accountInfo": "{}",
-  "topay": null,
-  "amount": "15.05",
-  "fx": "1"
+    "code": 200,
+    "message": "Операция успешно выполнена",
+    "accountInfo": "{\"verified\":true}",
+    "topay": null,
+    "amount": "80",
+    "currency": "TJS",
+    "fx": "1"
 }
 ```
+
+</details>
+<br />
+Пример №2. Проверка кредита Алиф
+
+<details><summary markdown="span">Check Account</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/accounts
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "account": "14623.00",
+    "amount": 160.00,
+    "currency": "TJS",
+    "hash": "3f6fa4c6c4a6576923761a021e69a9c1f46c3797bfa165b7ee170f0fe1db3623",
+    "providerId": 0,
+    "service": "credit",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "datetime": "Tue, 02 Aug 2022 13:32:48 +05"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Tue, 02 Aug 2022 13:32:48 +05"
+
+// Ответ
+
+{
+    "code": 200,
+    "message": "Салом Ҷ.Т.Г. Мо ин пардохтро ҳамчун транши 14623 қабул менамоем. Қарзи ҳозираатон 158 c.",
+    "amount": "160",
+    "currency": "TJS",
+    "fx": "1",
+    "topay": [
+        {
+            "id": "00",
+            "info": "Салом Ҷ.Т.Г. Мо ин пардохтро ҳамчун транши 14623 қабул менамоем. Қарзи ҳозираатон 158 c."
+        }
+    ],
+    "accountInfo": "{}"
+}
+```
+
+</details>
+<br />
+Пример №3. Проверка карты Корти Милли
+
+<details><summary markdown="span">Check Account</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/accounts
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "account": "5058270280015610",
+    "amount": 655.57,
+    "currency": "USD",
+    "hash": "03b35c8903854d026b95ec9a5a9eb57e127164f58071713bacf0872524237b3d",
+    "providerId": 0,
+    "service": "card_all",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "datetime": "Tue, 02 Aug 2022 08:38:14 +05"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Tue, 02 Aug 2022 08:38:14 +05"
+
+// Ответ
+
+{
+    "code": 200,
+    "message": "Успешно",
+    "amount": "6660.59",
+    "currency": "TJS",
+    "fx": "10.16",
+    "topay": null,
+    "accountInfo": ""
+}
+```
+
+</details>
+<br />
+Пример №4. Проверка счета по услуге провайдера
+
+<details><summary markdown="span">Check Account</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/accounts
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "service": "provider",
+    "providerId": 93,
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "d745524110e68c7f7ed4d945a8a5df4952e15434076952e00aa2fb606ade2250",
+    "account": "939145566",
+    "amount": 372.30,
+    "currency": "RUB",
+    "datetime": "Tue, 02 Aug 2022 13:42:49 +05"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9:Tue, 02 Aug 2022 13:42:49 +05"
+
+// Ответ
+
+{
+    "code": 200,
+    "message": "Успешно",
+    "amount": "60.76",
+    "currency": "TJS",
+    "fx": "0.1632",
+    "topay": null,
+    "accountInfo": ""
+}
+```
+
+</details>
+<br />
+{::options parse_block_html="false" /}
 
 
 ## Таблица №1. Коды ответов

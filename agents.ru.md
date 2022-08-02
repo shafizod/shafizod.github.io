@@ -87,11 +87,10 @@ topay             | object        | Условно       | Информация 
 accountInfo       | string        | Опционально   | Информация о счета получателя.
 limit             | string        | Условно       | Остаток лимита пополнения карты клиента. Обязательно, если "service":"card \| card_all"
 
+{::options parse_block_html="true" /}
 
 Пример №1. Пополнение кошелька алиф.моби
 
-{::options parse_block_html="true" /}
-
 <details><summary markdown="span">Check</summary>
 
 ```markdown
@@ -103,43 +102,43 @@ Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
-  "phone": "+992935141010",
-  "fee": 0.15,
-  "providerId": 0,
-  "last_name":"Иванов",
-  "first_name": "Иван",
-  "middle_name": "Иванович",
-  "sender_birthday": "12.12.1990",
-  "id_series_number": "5436271612",
-  "address": "Foteh Niyozi St",
-  "resident_city": "Dushanbe",
-  "resident_country": 860,
-  "postal_code": "734000",
-  "recipient_name": "John Doe"
+    "service": "wallet",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "a8f29ce5a92dd38b799b72fafc648e719241ee7cda6b9be3f6761de26250d6a7",
+    "account": "+992933507769",
+    "amount": 80.00,
+    "currency": "TJS",
+    "txnid": "193342620",
+    "phone": "+992935141010",
+    "fee": 0.15,
+    "providerId": 0,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9+99293350776919334262080.00"
 
 // Ответ
 
 {
-  "id": 14371303,
-  "datetime": "2022-07-28T22:43:18.742486833+05:00",
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "status": "accepted",
-  "statusCode": 0,
-  "amount": "3022.20",
-  "fx": "0.1679",
-  "topay": null,
-  "accountInfo": "{\"verified\":true}"
+    "id": 14477041,
+    "datetime": "2022-08-02T10:27:44.289030055+05:00",
+    "code": 200,
+    "message": "Б.Р.",
+    "status": "accepted",
+    "statusCode": 0,
+    "amount": "80",
+    "fx": "1",
+    "topay": null,
+    "accountInfo": "{\"verified\":true}"
 }
 ```
 
@@ -156,49 +155,50 @@ Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
-  "phone": "+992935141010",
-  "fee": 0.15,
-  "providerId": 0,
-  "last_name":"Иванов",
-  "first_name": "Иван",
-  "middle_name": "Иванович",
-  "sender_birthday": "12.12.1990",
-  "id_series_number": "5436271612",
-  "address": "Foteh Niyozi St",
-  "resident_city": "Dushanbe",
-  "resident_country": 860,
-  "postal_code": "734000",
-  "recipient_name": "John Doe"
+    "service": "wallet",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "a8f29ce5a92dd38b799b72fafc648e719241ee7cda6b9be3f6761de26250d6a7",
+    "account": "+992933507769",
+    "amount": 80.00,
+    "currency": "TJS",
+    "txnid": "193342620",
+    "phone": "+992935141010",
+    "fee": 0.15,
+    "providerId": 0,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9+99293350776919334262080.00"
 
 // Ответ
 
 {
-  "id": 14371303,
-  "datetime": "2022-07-28T22:43:18.742486833+05:00",
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "status": "accepted",
-  "statusCode": 0,
-  "amount": "3022.20",
-  "fx": "0.1679",
-  "topay": null,
-  "accountInfo": "{\"verified\":true}"
+    "id": 14477041,
+    "datetime": "2022-08-02T10:27:44.579560112+05:00",
+    "code": 200,
+    "message": "payment reached final state",
+    "status": "success",
+    "statusCode": 1,
+    "amount": "80",
+    "fx": "1",
+    "topay": null,
+    "accountInfo": null
 }
 ```
 
 </details>
+<br />
 
-Пример №2. Пополнение карты Корти Милли
+Пример №2. Пополнение кредита Алиф
 
 <details><summary markdown="span">Check</summary>
 
@@ -211,43 +211,48 @@ Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
-  "phone": "+992935141010",
-  "fee": 0.15,
-  "providerId": 0,
-  "last_name":"Иванов",
-  "first_name": "Иван",
-  "middle_name": "Иванович",
-  "sender_birthday": "12.12.1990",
-  "id_series_number": "5436271612",
-  "address": "Foteh Niyozi St",
-  "resident_city": "Dushanbe",
-  "resident_country": 860,
-  "postal_code": "734000",
-  "recipient_name": "John Doe"
+    "account": "14623.00",
+    "amount": 160.00,
+    "currency": "TJS",
+    "hash": "f88ab6fca84e103a02db3e6aec2313237229dea898c551002ce8e05b033f7d35",
+    "phone": "931010553",
+    "providerId": 0,
+    "service": "credit",
+    "txnid": "02081025022945",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b914623.0002081025022945160.00"
 
 // Ответ
 
 {
-  "id": 14371303,
-  "datetime": "2022-07-28T22:43:18.742486833+05:00",
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "status": "accepted",
-  "statusCode": 0,
-  "amount": "3022.20",
-  "fx": "0.1679",
-  "topay": null,
-  "accountInfo": "{\"verified\":true}"
+    "id": 14476969,
+    "datetime": "2022-08-02T10:25:02.824117951+05:00",
+    "code": 200,
+    "message": "Салом Ҷ.Т.Г. Мо ин пардохтро ҳамчун транши 14623 қабул менамоем. Қарзи ҳозираатон 158 c.",
+    "status": "accepted",
+    "statusCode": 0,
+    "amount": "160",
+    "fx": "1",
+    "topay": [
+        {
+            "id": "00",
+            "info": "Салом Ҷ.Т.Г. Мо ин пардохтро ҳамчун транши 14623 қабул менамоем. Қарзи ҳозираатон 158 c."
+        }
+    ],
+    "accountInfo": "{}"
 }
 ```
 
@@ -264,43 +269,152 @@ Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
-  "phone": "+992935141010",
-  "fee": 0.15,
-  "providerId": 0,
-  "last_name":"Иванов",
-  "first_name": "Иван",
-  "middle_name": "Иванович",
-  "sender_birthday": "12.12.1990",
-  "id_series_number": "5436271612",
-  "address": "Foteh Niyozi St",
-  "resident_city": "Dushanbe",
-  "resident_country": 860,
-  "postal_code": "734000",
-  "recipient_name": "John Doe"
+    "account": "14623.00",
+    "amount": 160.00,
+    "currency": "TJS",
+    "hash": "f88ab6fca84e103a02db3e6aec2313237229dea898c551002ce8e05b033f7d35",
+    "phone": "931010553",
+    "providerId": 0,
+    "service": "credit",
+    "txnid": "02081025022945",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b914623.0002081025022945160.00"
 
 // Ответ
 
 {
-  "id": 14371303,
-  "datetime": "2022-07-28T22:43:18.742486833+05:00",
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "status": "accepted",
-  "statusCode": 0,
-  "amount": "3022.20",
-  "fx": "0.1679",
-  "topay": null,
-  "accountInfo": "{\"verified\":true}"
+    "id": 14476969,
+    "datetime": "2022-08-02T10:25:03.309168522+05:00",
+    "code": 200,
+    "message": "payment reached final state",
+    "status": "success",
+    "statusCode": 1,
+    "amount": "160",
+    "fx": "1",
+    "topay": null,
+    "accountInfo": null
+}
+```
+
+</details>
+<br />
+
+Пример №3. Пополнение карты Корти Милли
+
+<details><summary markdown="span">Check</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/check
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "account": "5058270280015610",
+    "amount": 655.57,
+    "currency": "USD",
+    "hash": "de7e305c78f58bbbe8f9588f4c01cd3c17c4b2b61017ac90cc957cf7143547e1",
+    "phone": "79627204819",
+    "providerId": 0,
+    "service": "card_all",
+    "txnid": "A3563139401",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b95058270280015610A3563139401655.57"
+
+// Ответ
+
+{
+    "id": 14477338,
+    "datetime": "2022-08-02T10:38:34.94206247+05:00",
+    "code": 200,
+    "message": "O. A.",
+    "status": "accepted",
+    "statusCode": 0,
+    "amount": "6660.59",
+    "fx": "10.16",
+    "topay": null,
+    "accountInfo": "{}"
+}
+```
+
+</details>
+
+<details><summary markdown="span">Pay</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/pay
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "account": "5058270280015610",
+    "amount": 655.57,
+    "currency": "USD",
+    "hash": "de7e305c78f58bbbe8f9588f4c01cd3c17c4b2b61017ac90cc957cf7143547e1",
+    "phone": "79627204819",
+    "providerId": 0,
+    "service": "card_all",
+    "txnid": "A3563139401",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b95058270280015610A3563139401655.57"
+
+// Ответ
+
+{
+    "id": 14477338,
+    "datetime": "2022-08-02T10:38:36.313772759+05:00",
+    "code": 200,
+    "message": "payment saved for further process",
+    "status": "pending",
+    "statusCode": 1,
+    "amount": "6660.59",
+    "fx": "10.16",
+    "topay": null,
+    "accountInfo": null
 }
 ```
 
@@ -317,43 +431,205 @@ Accept: application/json
 Content-type: application/json; charset=utf-8
 
 {
-  "service": "wallet",
-  "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
-  "hash": "6abd8da5482f9133bbc86c48d967f9ad771057efd91c80c8d89c7fb2c917bb6f",
-  "account": "992928313003",
-  "amount": 18000.00,
-  "currency": "RUB",
-  "txnid": "29sP8k9FKBR3obJAhzHOVX7o2Gc",
-  "phone": "+992935141010",
-  "fee": 0.15,
-  "providerId": 0,
-  "last_name":"Иванов",
-  "first_name": "Иван",
-  "middle_name": "Иванович",
-  "sender_birthday": "12.12.1990",
-  "id_series_number": "5436271612",
-  "address": "Foteh Niyozi St",
-  "resident_city": "Dushanbe",
-  "resident_country": 860,
-  "postal_code": "734000",
-  "recipient_name": "John Doe"
+    "account": "5058270280015610",
+    "amount": 655.57,
+    "currency": "USD",
+    "hash": "de7e305c78f58bbbe8f9588f4c01cd3c17c4b2b61017ac90cc957cf7143547e1",
+    "phone": "79627204819",
+    "providerId": 0,
+    "service": "card_all",
+    "txnid": "A3563139401",
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
 }
 
-// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b999292831300329sP8k9FKBR3obJAhzHOVX7o2Gc18000.00"
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b95058270280015610A3563139401655.57"
 
 // Ответ
 
 {
-  "id": 14371303,
-  "datetime": "2022-07-28T22:43:18.742486833+05:00",
-  "code": 200,
-  "message": "Ғ.Ш.",
-  "status": "accepted",
-  "statusCode": 0,
-  "amount": "3022.20",
-  "fx": "0.1679",
-  "topay": null,
-  "accountInfo": "{\"verified\":true}"
+    "id": 14477338,
+    "datetime": "2022-08-02T10:38:37.080271101+05:00",
+    "code": 200,
+    "message": "Платеж существует",
+    "status": "success",
+    "statusCode": 1,
+    "amount": "6660.59",
+    "fx": "10.16",
+    "topay": null,
+    "accountInfo": null
+}
+```
+
+</details>
+
+
+Пример №4. Пополнение услуги провайдера
+
+<details><summary markdown="span">Check</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/check
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "service": "provider",
+    "providerId": 93,
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "bbcaac2cd9735437a1e93e57c39927d980337927b077b11c41dad6f8bcf43a08",
+    "account": "939145566",
+    "amount": 372.30,
+    "currency": "RUB",
+    "phone": "988844074",
+    "txnid": "210000617795814",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9939145566210000617795814372.30"
+
+// Ответ
+
+{
+    "id": 14477737,
+    "datetime": "2022-08-02T10:53:00.823410913+05:00",
+    "code": 200,
+    "message": "Аккаунт найден",
+    "status": "accepted",
+    "statusCode": 0,
+    "amount": "60.76",
+    "fx": "0.1632",
+    "topay": null,
+    "accountInfo": "{}"
+}
+```
+
+</details>
+
+<details><summary markdown="span">Pay</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/pay
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "service": "provider",
+    "providerId": 93,
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "bbcaac2cd9735437a1e93e57c39927d980337927b077b11c41dad6f8bcf43a08",
+    "account": "939145566",
+    "amount": 372.30,
+    "currency": "RUB",
+    "phone": "988844074",
+    "txnid": "210000617795814",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9939145566210000617795814372.30"
+
+// Ответ
+
+{
+    "id": 14477737,
+    "datetime": "2022-08-02T10:53:39.087346623+05:00",
+    "code": 200,
+    "message": "payment saved for further process",
+    "status": "pending",
+    "statusCode": 2,
+    "amount": "60.76",
+    "fx": "0.1632",
+    "topay": null,
+    "accountInfo": null
+}
+```
+
+</details>
+
+<details><summary markdown="span">Post Check</summary>
+
+```markdown
+// Запрос
+
+Метод: POST
+Адрес: https://alifpay.tj/gate/post_check
+Accept: application/json
+Content-type: application/json; charset=utf-8
+
+{
+    "service": "provider",
+    "providerId": 93,
+    "userid": "476a1b42-b3dc-40e9-afad-4aaae1d640b9",
+    "hash": "bbcaac2cd9735437a1e93e57c39927d980337927b077b11c41dad6f8bcf43a08",
+    "account": "939145566",
+    "amount": 372.30,
+    "currency": "RUB",
+    "phone": "988844074",
+    "txnid": "210000617795814",
+    "fee": 0.15,
+    "last_name":"Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "sender_birthday": "12.12.1990",
+    "id_series_number": "5436271612",
+    "address": "Foteh Niyozi St",
+    "resident_city": "Dushanbe",
+    "resident_country": 860,
+    "postal_code": "734000",
+    "recipient_name": "John Doe"
+}
+
+// Конкатенированная строка для генерации hash: "476a1b42-b3dc-40e9-afad-4aaae1d640b9939145566210000617795814372.30"
+
+// Ответ
+
+{
+    "id": 14477737,
+    "datetime": "2022-08-02T10:54:15.482274805+05:00",
+    "code": 200,
+    "message": "Платеж существует",
+    "status": "success",
+    "statusCode": 1,
+    "amount": "60.76",
+    "fx": "0.1632",
+    "topay": null,
+    "accountInfo": null
 }
 ```
 
